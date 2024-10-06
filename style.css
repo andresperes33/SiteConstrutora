@@ -420,7 +420,9 @@ body::before {
     font-size: 1rem;
     color: #ffffff;
     text-decoration: none;
+    
 }
+
 
 .footer-section a:hover {
     color: #ff9900;
@@ -436,11 +438,13 @@ body::before {
 .footer-section .social-icons a {
     font-size: 1.5rem;
     color: #ffffff;
-    transition: color 0.3s ease;
+    transition: background-color 1s, transform 0.3s; /* Define a transição */
+    transform: translateY(0); /* Define a posição inicial */
 }
 
 .footer-section .social-icons a:hover {
     color: #ff9900;
+    transform: translateY(-5px); /* Movimenta o ícone para cima ao passar o mouse */
 }
 
 .footer-section p.mb-0 {
