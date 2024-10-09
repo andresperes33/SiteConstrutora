@@ -153,6 +153,7 @@ body::before {
     }
 }
 
+
 /* Estilos para a Seção de Vídeo Institucional */
 .institutional-video {
     padding-top: 3rem;
@@ -169,6 +170,8 @@ body::before {
     font-size: 1.25rem;
     margin-bottom: 2rem;
 }
+
+
 
 .video-wrapper {
     position: relative;
@@ -259,6 +262,7 @@ body::before {
 .justified-text {
     text-align: justify;
 }
+
 
 
 /* Estilos para a Seção Antes e Depois */
