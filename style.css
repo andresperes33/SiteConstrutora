@@ -72,28 +72,29 @@ body::before {
     height: 100px;
 }
 
+/* Reduzindo o espaço entre os itens do menu */
 .navbar-nav .nav-link {
     color: #081E84;
     font-weight: normal;
-    margin-right: 80px;
+    margin-right: 20px; /* Reduzido de 80px para 20px */
     text-decoration: none;
-    font-size: 16px;
-    transition: background-color 1s, transform 0.3s; /* Define a transição */
-    transform: translateY(0); /* Define a posição inicial */
+    font-size: 18px;
+    transition: background-color 1s, transform 0.3s;
+    transform: translateY(0);
 }
 
-/* Cor de hover */
+/* Efeito de hover */
 .navbar-nav .nav-link:hover {
     color: #1D39A6;
-    transform: translateY(-5px); /* Movimenta o ícone para cima ao passar o mouse */
+    transform: translateY(-5px);
 }
 
 .navbar-nav .nav-item {
-    margin-left: 10px; /* Reduz o espaço entre os itens do menu */
+    margin-left: 10px;
 }
 
 .navbar-nav .nav-link {
-    padding: 5px 10px; /* Ajusta o padding interno do link para ocupar menos espaço */
+    padding: 5px 10px;
 }
 
 /* Garante que 'Antes e Depois' não quebre a linha */
@@ -102,22 +103,22 @@ body::before {
 }
 
 .navbar-nav {
-    flex-wrap: nowrap; /* Garante que os itens não quebrem para outra linha */
+    flex-wrap: nowrap;
 }
 
+/* Responsividade: Ajusta o tamanho da fonte em telas menores */
 @media (max-width: 968px) {
     .navbar-nav .nav-link {
-        font-size: 14px; /* Diminui o tamanho da fonte para economizar espaço */
+        font-size: 14px;
     }
 }
 
-
-/* Ícones Sociais */
+/* Ícones Sociais: Alinhamento horizontal e espaçamento reduzido */
 .social-icons {
     display: flex;
-    justify-content: center;
+    justify-content: start; /* Alinhamento horizontal à esquerda */
     align-items: center;
-    gap: 10px;
+    gap: 5px; /* Reduzido o espaço entre os ícones */
 }
 
 .social-icons a {
@@ -131,18 +132,20 @@ body::before {
     width: 40px;
     height: 40px;
     text-decoration: none;
-    transition: background-color 1s, transform 0.3s; /* Define a transição */
-    transform: translateY(0); /* Define a posição inicial */
+    transition: background-color 1s, transform 0.3s;
+    transform: translateY(-5px);
 }
 
+/* Efeito de hover nos ícones sociais */
 .social-icons a:hover {
     background-color: #1D39A6;
-    transform: translateY(-5px); /* Movimenta o ícone para cima ao passar o mouse */
+    transform: translateY(-10px);
 }
 
 .social-icons i {
     font-size: 16px;
 }
+
 
 .contact-info{
     background: #081E84; 
@@ -521,7 +524,7 @@ body::before {
 }
 
 .footer-section .social-icons a:hover {
-    color: #ff9900;
+   
     transform: translateY(-5px); /* Movimenta o ícone para cima ao passar o mouse */
 }
 
