@@ -21,14 +21,11 @@ body {
 }
 
 /* Aplicar gradiente a todos os títulos (h1 a h6) e parágrafos (p) */
-h1, h2, h3, h4, h5, h6, p {
-    font-weight: bold;
-    text-decoration: none;
-    background: linear-gradient(to right, #0044cc, #0088ff); /* Aplicamos o gradiente ao fundo */
-    -webkit-background-clip: text; /* Faz o gradiente aplicar-se ao texto */
-    background-clip: text;
-    color: transparent; /* Deixamos o texto transparente para o gradiente ser visível */
-    transition: color 0.5s, background 0.5s;
+h1, h2, h3, h4, h5, h6{
+    color: #081E84;
+}
+p{
+    color: #3B3A3A;
 }
 
 
@@ -39,7 +36,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 /* Sobrescrevendo os títulos com pesos diferentes */
 h1, h2, h3, h4, h5, h6 {
-    font-weight: 700 !important; /* Usando o peso 700 (negrito) da fonte Poppins */
+    font-weight: 400 !important; /* Usando o peso 700 (negrito) da fonte Poppins */
 }
 
 p, a, li, span {
@@ -62,7 +59,6 @@ body::before {
 
 
 .navbar {
-    
     padding: 15px;
 }
 
@@ -77,23 +73,44 @@ body::before {
 }
 
 .navbar-nav .nav-link {
-    color: #0044cc; /* Usamos uma cor sólida para o texto */
-    font-weight: bold;
+    color: #081E84;
+    font-weight: normal;
     margin-right: 80px;
     text-decoration: none;
-    background: linear-gradient(to right, #0044cc, #0088ff); /* Aplicamos o gradiente ao fundo */
-    -webkit-background-clip: text; /* Faz o gradiente aplicar-se ao texto */
-    background-clip: text;
-    color: transparent; /* Deixamos o texto transparente para o gradiente ser visível */
-    transition: color 0.5s, background 0.5s;
+    font-size: 16px;
+    transition: background-color 1s, transform 0.3s; /* Define a transição */
+    transform: translateY(0); /* Define a posição inicial */
 }
 
+/* Cor de hover */
 .navbar-nav .nav-link:hover {
-    color: #ff9900;
-    background: linear-gradient(to right, #ff9900, #ffcc00); /* Mantém um gradiente no hover */
-    -webkit-background-clip: text;
-    background-clip: text;
+    color: #1D39A6;
+    transform: translateY(-5px); /* Movimenta o ícone para cima ao passar o mouse */
 }
+
+.navbar-nav .nav-item {
+    margin-left: 10px; /* Reduz o espaço entre os itens do menu */
+}
+
+.navbar-nav .nav-link {
+    padding: 5px 10px; /* Ajusta o padding interno do link para ocupar menos espaço */
+}
+
+/* Garante que 'Antes e Depois' não quebre a linha */
+.navbar-nav .nav-link[href="#antesedepois"] {
+    white-space: nowrap;
+}
+
+.navbar-nav {
+    flex-wrap: nowrap; /* Garante que os itens não quebrem para outra linha */
+}
+
+@media (max-width: 968px) {
+    .navbar-nav .nav-link {
+        font-size: 14px; /* Diminui o tamanho da fonte para economizar espaço */
+    }
+}
+
 
 /* Ícones Sociais */
 .social-icons {
@@ -104,7 +121,7 @@ body::before {
 }
 
 .social-icons a {
-    background: linear-gradient(to right, #0044cc, #0088ff); /* Gradiente aplicado ao fundo */
+    background: #081E84;
     color: white;
     padding: 10px;
     border-radius: 10px;
@@ -119,7 +136,7 @@ body::before {
 }
 
 .social-icons a:hover {
-    background-color: #ff9900;
+    background-color: #1D39A6;
     transform: translateY(-5px); /* Movimenta o ícone para cima ao passar o mouse */
 }
 
@@ -128,11 +145,14 @@ body::before {
 }
 
 .contact-info{
-    background: linear-gradient(to right, #0044cc, #0088ff); /* Gradiente aplicado ao fundo */
+    background: #081E84; 
     color: white;
     padding: 20px 0;
+    
 
 }
+
+
 
 /* Responsividade melhorada para o container */
 @media (max-width: 1200px) {
@@ -248,15 +268,15 @@ body::before {
 
 /* Botão CTA */
 .services-section .btn-primary {
-    background-color: #0044cc;
-    border-color: #0044cc;
+    background-color: #081E84;
+    border-color: #081E84;
     padding: 10px 30px;
     font-size: 1.25rem;
 }
 
 .services-section .btn-primary:hover {
-    background-color: #ff9900;
-    border-color: #ff9900;
+    background-color: #1D39A6;
+    border-color: #1D39A6;
 }
 
 .justified-text {
@@ -390,13 +410,26 @@ body::before {
     color: white;
 }
 
-/* Estilo dos itens da galeria */
+.gallery-item {
+    position: relative;
+    width: 100%;
+    padding-top: 75%; /* Define uma altura relativa à largura para garantir a proporção */
+    overflow: hidden; /* Garante que partes da imagem que saiam do contêiner sejam cortadas */
+}
+
 .gallery-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+    display: block; /* Remove possíveis margens/paddings extras */
     border: 2px solid #ddd;
     border-radius: 5px;
-    width: 100%;
     transition: transform 0.3s ease;
 }
+
 
 .gallery-item img:hover {
     transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
@@ -441,19 +474,19 @@ body::before {
 }
 
 .contact-form-section .btn-primary {
-    background-color: #0044cc;
-    border-color: #0044cc;
+    background-color: #081E84;
+    border-color: #081E84;
 }
 
 .contact-form-section .btn-primary:hover {
-    background-color: #ff9900;
-    border-color: #ff9900;
+    background-color: #1D39A6;
+    border-color: #1D39A6;
 }
 
 /* Estilos para o Footer */
 .footer-section {
     
-    color: #0044cc;
+    
 }
 
 .footer-section h5 {
@@ -465,16 +498,14 @@ body::before {
 .footer-section p,
 .footer-section a {
     font-size: 1rem;
+    color: #3B3A3A;
     
     text-decoration: none;
     
 }
 
 
-.footer-section a:hover {
-    color: #ff9900;
-    text-decoration: underline;
-}
+
 
 .footer-section img {
     max-width: 150px;
@@ -498,6 +529,15 @@ body::before {
     font-size: 0.875rem;
     
 }
+.social-icons {
+    display: flex;
+    justify-content: start; /* Alinhar os ícones à esquerda */
+    margin-top: 10px; /* Espaçamento entre "Siga-nos" e os ícones */
+}
+
+
+
+
 
 /* Estilos da seta para subir ao topo */
 .back-to-top {
@@ -540,13 +580,14 @@ body::before {
     transition: all 0.3s ease-in-out;
   }
   
-  /* Tamanho original da imagem para telas grandes */
-  .whatsapp-image img {
-    width: 18.125rem; /* Aproximadamente 290px */
-    height: 4.4375rem; /* Aproximadamente 71px */
-    box-shadow: 0px 0.25rem 0.625rem rgba(0, 0, 0, 0.1); /* Aproximadamente 4px 10px */
+  /* Metade do tamanho original da imagem */
+.whatsapp-image img {
+    width: 9.0625rem; /* Aproximadamente 145px */
+    height: 2.21875rem; /* Aproximadamente 35.5px */
+    box-shadow: 0px 0.25rem 0.625rem rgba(0, 0, 0, 0.1); /* Mantém a sombra como estava */
     object-fit: cover;
-  }
+}
+
   
   /* Efeito hover para mudar a opacidade ao passar o mouse */
   .whatsapp-image:hover img {
