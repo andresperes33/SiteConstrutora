@@ -313,37 +313,78 @@ body::before {
     margin-bottom: 2rem;
 }
 
+/* Estilos para os itens de Antes e Depois */
 .before-after-item {
-    position: relative;
+    position: relative; /* Necessário para que o .label seja posicionado corretamente */
 }
 
 .before-after-item img {
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    border: 2px solid #ddd;
 }
 
+/* Estilos para a label "Antes" e "Depois" sobre as imagens */
 .before-after-item .label {
     position: absolute;
     bottom: 10px;
     left: 10px;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo semitransparente */
     color: white !important;
     padding: 5px 10px;
     border-radius: 3px;
     font-size: 1rem;
+    font-weight: bold;
 }
 
+/* Margem para a segunda imagem no item */
 .before-after-item .after-img {
     margin-top: 1.5rem;
 }
-.cor{
-    background-color: #081E84;
+
+/* Estilos para garantir que as labels "Antes" e "Depois" apareçam sobre as imagens */
+.gallery-item {
+    position: relative;
+    display: inline-block;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    border: 2px solid #ddd;
+}
+
+/* Estilos para as labels "Antes" e "Depois" flutuarem sobre as imagens */
+.gallery-item .label {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo semitransparente */
+    color: white !important; /* Texto branco */
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 1rem;
+    font-weight: bold;
+    z-index: 1; /* Garante que a label fique sobre a imagem */
 }
 
 
+
+
+/* Estilos gerais */
+.cor {
+    background-color: #081E84 !important;
+}
+
 .testimonial {
     background-color: #fff;
-    padding: 20px ;
+    padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: 20px;
@@ -361,21 +402,20 @@ body::before {
     font-weight: bold;
 }
 
-/* Forçando a cor dourada com !important e aumentando a especificidade */
+/* Estilos para as estrelas */
 .stars i {
-    color: #FFD700 !important;  /* Cor dourada */
+    color: #FFD700 !important;
     font-size: 1.2rem !important;
 }
 
 /* Estilos para as setas */
 .slick-prev, .slick-next {
-    background: none;  /* Remove o fundo */
+    background: none;
     color: black;
     padding: 15px;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    
     z-index: 10;
     border: none;
 }
@@ -388,9 +428,6 @@ body::before {
     right: 10px;
 }
 
-
-
-
 /* Tamanho das setas */
 .slick-prev i, .slick-next i {
     font-size: 20px;
@@ -400,11 +437,109 @@ body::before {
     position: relative;
     padding: 50px 50px;
     transform: translateY(-10%);
-    /* Remover ou ajustar o translateY */
-    /* transform: translateY(-10%); */
     width: 100%;
 }
 
+
+
+/* Media queries para telas menores */
+
+/* Para telas menores que 1200px */
+@media (max-width: 1200px) {
+    .testimonial-carousel {
+        padding: 40px 30px;
+        transform: translateY(0);
+    }
+    
+    .testimonial {
+        margin: 15px;
+        padding: 15px;
+    }
+
+    .testimonial img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .slick-prev, .slick-next {
+        padding: 10px;
+    }
+}
+
+/* Para telas menores que 992px */
+@media (max-width: 992px) {
+    .testimonial-carousel {
+        padding: 30px 20px;
+    }
+
+    .testimonial {
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .testimonial img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .slick-prev, .slick-next i {
+        font-size: 18px;
+    }
+}
+
+/* Para telas menores que 768px */
+@media (max-width: 768px) {
+    .testimonial-carousel {
+        padding: 20px 10px;
+    }
+
+    .testimonial {
+        margin: 5px;
+        padding: 10px;
+    }
+
+    .testimonial img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .testimonial h5 {
+        font-size: 1rem;
+    }
+
+    .slick-prev, .slick-next i {
+        font-size: 16px;
+    }
+}
+
+/* Para telas menores que 576px */
+@media (max-width: 576px) {
+    .testimonial-carousel {
+        padding: 10px 5px;
+    }
+
+    .testimonial {
+        margin: 5px;
+        padding: 8px;
+    }
+
+    .testimonial img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .testimonial h5 {
+        font-size: 0.9rem;
+    }
+
+    .slick-prev, .slick-next {
+        padding: 5px;
+    }
+
+    .slick-prev i, .slick-next i {
+        font-size: 14px;
+    }
+}
 
 
 
@@ -472,6 +607,8 @@ body::before {
 .filter.show {
     display: block;
 }
+
+
 
 /* Estilos para a Seção de Formulário de Contato */
 .contact-form-section {
