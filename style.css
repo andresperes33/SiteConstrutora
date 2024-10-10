@@ -242,8 +242,10 @@ body::before {
 
 /* Estilos para a Seção de Serviços */
 .services-section {
-    padding-top: 3rem;
+    padding-top: 3rem !important;
     padding-bottom: 3rem;
+    background-color: #081E84;
+    
     
 }
 
@@ -251,11 +253,13 @@ body::before {
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 1rem;
+    color: white !important;
 }
 
 .services-section p.lead {
     font-size: 1.25rem;
     margin-bottom: 2rem;
+    color: white !important;
 }
 
 .service-item h4 {
@@ -293,9 +297,9 @@ body::before {
 
 /* Estilos para a Seção Antes e Depois */
 .before-after-section {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-    
+    padding-top: 3rem; /* Mantém o padding superior */
+    padding-bottom: 0; /* Remove o padding inferior */
+    margin-bottom: 0; /* Remove o margin inferior */
 }
 
 .before-after-section h2 {
@@ -332,11 +336,14 @@ body::before {
 .before-after-item .after-img {
     margin-top: 1.5rem;
 }
+.cor{
+    background-color: #081E84;
+}
 
 
 .testimonial {
     background-color: #fff;
-    padding: 20px;
+    padding: 20px ;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: 20px;
@@ -346,7 +353,7 @@ body::before {
     width: 80px;
     height: 80px;
     object-fit: cover;
-    margin: 10px 0;
+    margin: 10px auto;
 }
 
 .testimonial h5 {
@@ -368,6 +375,7 @@ body::before {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    
     z-index: 10;
     border: none;
 }
@@ -390,8 +398,13 @@ body::before {
 
 .testimonial-carousel {
     position: relative;
-    padding: 0 50px;
+    padding: 50px 50px;
+    transform: translateY(-10%);
+    /* Remover ou ajustar o translateY */
+    /* transform: translateY(-10%); */
+    width: 100%;
 }
+
 
 
 
