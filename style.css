@@ -435,7 +435,7 @@ body::before {
 
 .testimonial-carousel {
     position: relative;
-    padding: 50px 50px;
+    padding: 50px 60px;
     transform: translateY(-10%);
     width: 100%;
 }
